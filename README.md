@@ -1,73 +1,54 @@
-# React + TypeScript + Vite
+# ⚡ Calculadora de Dimensionamento Elétrico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Software técnico de alta performance desenvolvido por **Davi Santana** para o dimensionamento preciso de condutores elétricos por queda de tensão. O projeto foca em entregar autoridade técnica para profissionais de automação e elétrica através de memoriais descritivos profissionais.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades Completas
 
-## React Compiler
+### 📥 Entrada de Parâmetros
+* **Dados de Obra**: Nome do cliente e local da instalação para personalização de relatórios.
+* **Tensão Nominal ($V$)**: Suporte a sistemas de 127V, 220V e 380V.
+* **Corrente de Projeto ($A$)**: Entrada precisa baseada na carga do circuito.
+* **Distância ($m$)**: Comprimento total do trecho condutor.
+* **Queda de Tensão Máxima ($%$)**: Ajuste conforme normas técnicas locais (Ex: 4%).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📤 Memorial de Cálculo (Output)
+* **Bitola Sugerida**: Recomendação comercial imediata em mm².
+* **Queda de Tensão Real**: Cálculo percentual do impacto no circuito.
+* **Perda de Tensão ($V$)**: Valor exato da queda em Volts.
+* **Seção Exata**: Resultado bruto do cálculo matemático ($mm^2$) antes da padronização comercial.
+* **Tensão Calculada**: Confirmação do nível de tensão base utilizado.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📐 Base de Engenharia
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+O motor de cálculo utiliza a constante de resistividade do cobre ($\rho = 0,0172$) e a fórmula padrão para circuitos de baixa tensão:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+$$S = \frac{2 \cdot \rho \cdot L \cdot I}{\Delta V}$$
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Stack Tecnológica
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* **Interface**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/).
+* **Estilização**: [Tailwind CSS v4](https://tailwindcss.com/) (Visual Profissional / Dark Mode).
+* **Linguagem**: [TypeScript](https://www.typescriptlang.org/).
+* **Exportação**: [jsPDF](https://github.com/parallax/jsPDF) + [html2canvas](https://html2canvas.hertzen.com/) com tratamento de cores moderno.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛣️ Roadmap de Evolução
+
+- [x] Memorial de Cálculo completo
+- [x] Exportação de Relatório PDF Personalizado
+- [ ] Integração com WhatsApp para envio de orçamentos
+- [ ] Cálculo de dimensionamento de disjuntores e eletrodutos
+- [ ] Listagem de materiais com link de afiliados
+
+---
+
+## 👨‍💻 Sobre o Desenvolvedor
+
+**Davi Alexandre Silva Santana (Santana)** Estudante de Engenharia de Controle e Automação no **CEFET-MG** (Campus Leopoldina) e Técnico em Automação Industrial. Fundador da **Niobio Labs**, focada em soluções inteligentes para o setor elétrico e "maker".
