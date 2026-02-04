@@ -51,4 +51,4 @@ $$S = \frac{2 \cdot \rho \cdot L \cdot I}{\Delta V}$$
 
 ## 👨‍💻 Sobre o Desenvolvedor
 
-**Davi Alexandre Silva Santana (Santana)** Estudante de Engenharia de Controle e Automação no **CEFET-MG** (Campus Leopoldina) e Técnico em Automação Industrial. Fundador da **Niobio Labs**, focada em soluções inteligentes para o setor elétrico e "maker".
+**Davi Santana** Estudante de Engenharia de Controle e Automação no **CEFET-MG** (Campus Leopoldina) e Técnico em Automação Industrial. Fundador da **Niobio Labs**, focada em soluções inteligentes para o setor elétrico e "maker".
