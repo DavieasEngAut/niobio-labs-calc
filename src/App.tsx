@@ -75,7 +75,7 @@ export default function App() {
       <div className="max-w-md w-full bg-gray-900 rounded-3xl shadow-2xl overflow-hidden border border-gray-800">
         
         <div className="bg-blue-600 p-6 text-center">
-          <h1 className="text-2xl font-black tracking-tighter uppercase italic">Niobio Labs</h1>
+          <h1 className="text-2xl font-black tracking-tighter uppercase italic">Calculadora</h1>
           <p className="text-blue-100 text-sm font-medium uppercase tracking-widest">Cálculo de Engenharia</p>
         </div>
 
